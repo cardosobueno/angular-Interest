@@ -1,0 +1,16 @@
+<h2>Calculadora Juros Composto</h2>
+
+<p>taxa : {{ result | currency }}</p>
+<p>total :{{ result + valor | currency }}</p>
+
+Meses: <input type="number" placeholder="Mês" [value]="mes" [(ngModel)]="mes" />
+<br />
+Valor inicial:
+<input type="number" placeholder="Valor" [value]="valor" [(ngModel)]="valor" />
+<br />
+Porcentagem mensal:
+<input type="number" placeholder="Taxa" [value]="taxa" [(ngModel)]="taxa" />
+<br />
+<button (click)="calcula()">Calcular</button>
+<br />
+<hr />
