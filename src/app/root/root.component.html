@@ -1,9 +1,11 @@
 <h1>Tarefa juros</h1>
 
-<input type="radio" [(ngModel)]="option" [value]="1" />1
+<input type="radio" [(ngModel)]="option" [value]="1" name="JurosSimples" />
+<label for="JurosSimples">Selecionar Juros simples</label>
+<br />
+<input type="radio" [(ngModel)]="option" [value]="2" name="JurosComposto" />
+<label for="JurosComposto">Selecionar Juros composto</label>
 
-<input type="radio" [(ngModel)]="option" [value]="2" />2
+<div *ngIf="option == '1'"><app-jurossimples> </app-jurossimples></div>
 
-<div *ngIf="option == '1'"> <app-jurossimples> </app-jurossimples> </div>
-
-<div *ngIf="option == '2'"> <app-juroscomposto></app-juroscomposto> </div>
+<div *ngIf="option == '2'"><app-juroscomposto></app-juroscomposto></div>
