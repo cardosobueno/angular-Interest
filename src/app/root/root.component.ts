@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./root.component.css'],
 })
 export class RootComponent {
+  @Input()
   option = '0';
+
   constructor() {}
 
   ngOnInit() {}
